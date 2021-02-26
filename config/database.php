@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '45.155.38.175'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'ehealths_newfuntrivia'),
+            'database' => env('DB_DATABASE', 'ehealths_funtrivia'),
             'username' => env('DB_USERNAME', 'ehealths_mr_producer'),
             'password' => env('DB_PASSWORD', '&_$?W=~NUArk'),
             'unix_socket' => env('DB_SOCKET', ''),
