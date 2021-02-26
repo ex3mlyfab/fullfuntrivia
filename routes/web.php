@@ -26,9 +26,7 @@ Route::get('/', function(){
 Route::get('/levels', function(){
     return view('front.levels');
 });
-Route::get('/levels', function(){
-    return view('front.contact');
-});
+
 Route::get('/rules', function(){
     return view('front.rules');
 });

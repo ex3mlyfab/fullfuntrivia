@@ -1,4 +1,4 @@
-@extends('front.layouts')
+@extends('front.layouts.home')
 
 @section('title')
     Levels
@@ -11,11 +11,12 @@
                 <h2>Levels</h2>
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="{{url('/')}}">Home</a>
                     </li>
                     <li>Rules</li>
                 </ul>
             </div>
         </div>
     </div>
+    @include('front.layouts.levels')
 @endsection

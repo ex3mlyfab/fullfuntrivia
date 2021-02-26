@@ -23,7 +23,7 @@
 <!-- Start About Area -->
 <section class="about-area bg-ffffff ptb-100">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-content-warp">
                     <span>Bronze Level</span>
@@ -63,7 +63,7 @@
 
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="{{asset('assets')}}/img/game-level/1.png" />
+                    <img src="{{asset('assets')}}/img/game-level/2.png" class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -79,12 +79,9 @@
             <h2>Bronze plan gives you a chance to win the following prizes. With an entry fee ₦300.00 you win.</h2>
         </div>
 
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact">
-                    <div class="icon">
-                        <i class="flaticon-positive-vote"></i>
-                    </div>
 
                     <h3>
                         ₦<span class="odometer" data-count="40000">00</span>
@@ -93,11 +90,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact">
-                    <div class="icon">
-                        <i class="flaticon-confetti"></i>
-                    </div>
+
 
                     <h3>
                         ₦<span class="odometer" data-count="30000">00</span>
@@ -108,9 +103,7 @@
 
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact">
-                    <div class="icon">
-                        <i class="flaticon-trophy"></i>
-                    </div>
+
 
                     <h3>
                         ₦<span class="odometer" data-count="20000">00</span>
@@ -121,9 +114,7 @@
 
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact">
-                    <div class="icon">
-                        <i class="flaticon-success"></i>
-                    </div>
+
 
                     <h3>
                         ₦<span class="odometer" data-count="4000">00</span>
@@ -133,9 +124,7 @@
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-fun-fact">
-                    <div class="icon">
-                        <i class="flaticon-success"></i>
-                    </div>
+
 
                     <h3>
                         ₦<span class="odometer" data-count="300">00</span>
