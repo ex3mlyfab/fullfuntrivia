@@ -18,10 +18,40 @@ Route::get('/testing',function(){
     return Inertia::render('Testing');
 });
 Route::get('/', function(){
-    return view('front.great');
+    return view('front.great', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
 });
 Route::get('/levels', function(){
-    return view('front.great');
+    return view('front.levels');
+});
+Route::get('/levels', function(){
+    return view('front.contact');
+});
+Route::get('/rules', function(){
+    return view('front.rules');
+});
+Route::get('/section', function(){
+    return view('front.section');
+});
+Route::get('/faq', function(){
+    return view('front.faq');
+});
+Route::get('/starter', function(){
+    return view('front.starter');
+});
+Route::get('/bronze', function(){
+    return view('front.bronze');
+});
+Route::get('/silver', function(){
+    return view('front.silver');
+});
+Route::get('/gold', function(){
+    return view('front.gold');
+});
+Route::get('/platinum', function(){
+    return view('front.platinum');
 });
 Route::get('/ghetto', function () {
     return Inertia::render('Welcome', [

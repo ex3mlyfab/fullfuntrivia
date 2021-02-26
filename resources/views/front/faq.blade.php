@@ -1,7 +1,7 @@
 @extends('front.layouts.')
 
 @section('title')
-    FAQ's
+   Contact us
 @endsection
 
 @section('content')
@@ -9,12 +9,12 @@
      <div class="page-banner-area">
         <div class="container">
             <div class="page-banner-content">
-                <h2>FAQ</h2>
+                <h2>contact us</h2>
                 <ul>
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    <li>FAQ</li>
+                    <li>contact us</li>
                 </ul>
             </div>
         </div>

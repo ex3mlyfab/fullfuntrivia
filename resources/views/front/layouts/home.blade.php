@@ -71,51 +71,51 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="{{url('/')}}" class="nav-link active">
                                         Home
 
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="credit-card.html" class="nav-link">
+                                    <a href="{{url('/section')}}" class="nav-link">
                                         Sections
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{url('/levels')}}" class="nav-link">
                                        Game Levels
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="about.html" class="nav-link">
+                                            <a href="{{url('/starter')}}" class="nav-link">
                                                 Starter
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="team.html" class="nav-link">
+                                            <a href="{{url('/bronze')}}" class="nav-link">
                                                 Bronze
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="pricing.html" class="nav-link">
+                                            <a href="{{url('/silver')}}" class="nav-link">
                                                 Silver
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="open-account.html" class="nav-link">
+                                            <a href="{{url('/gold')}}" class="nav-link">
                                                 Gold
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="security.html" class="nav-link">
+                                            <a href="{{url('/platinum')}}" class="nav-link">
                                                 Platinum
                                             </a>
                                         </li>
@@ -125,27 +125,27 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Rules
+                                    <a href="{{url('/rules')}}" class="nav-link">
+                                        Rules &amp; FAQ
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="services.html" class="nav-link">
+                                            <a href="{{url('/rules')}}" class="nav-link">
                                                 Fun Trivia Rules
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="services-details.html" class="nav-link">
-                                                Rule details
+                                            <a href="{{url('/faq')}}" class="nav-link">
+                                                FAQ
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">
+                                    <a href="{{url('/contact')}}" class="nav-link">
                                         Contact
                                     </a>
                                 </li>
@@ -164,12 +164,34 @@
                                 </div>
 
                                 <div class="option-item">
-                                    @auth
-                                    <a href="open-account.html" class="default-btn">Open accountss</a>
-                                    @else
-                                    <a href="open-account.html" class="default-btn">Open account</a>
-                                    @endauth
+                                    @guest
 
+                                        <a class="default-btn" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                                    @if (Route::has('register'))
+
+                                        <a class="default-btn" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+                                    @endif
+                                @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                @endguest
                                 </div>
                             </div>
                         </div>
@@ -187,12 +209,15 @@
                         </div>
                     </div>
 
+
                     <div class="container">
                         <div class="option-inner">
                             <div class="others-options d-flex align-items-center">
                                 <div class="option-item">
                                     <a href="open-account.html" class="default-btn">Open account</a>
                                 </div>
+                                 <!-- Authentication Links -->
+
                             </div>
                         </div>
                     </div>
@@ -208,7 +233,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-footer-widget">
                             <div class="footer-logo">
-                                <h2><a href="index.html">Funtrivia</a></h2>
+                                <h2><a href="{{url('/')}}">Funtrivia</a></h2>
 
                                 <p>Funtrivia is a platform that allows you to earn with your knowledge. Participate in our quiz at any level and win amazing prizes</p>
 
@@ -268,10 +293,10 @@
 
                             <ul class="quick-links">
                                 <li>
-                                    <a href="#">Levels</a>
+                                    <a href="{{url('/levels')}}">Levels</a>
                                 </li>
                                 <li>
-                                    <a href="#">Sections</a>
+                                    <a href="{{url('/section')}}">Sections</a>
                                 </li>
                                 <li>
                                     <a href="#">Past Winners</a>
@@ -293,14 +318,14 @@
                                     <a href="#">Corporate information</a>
                                 </li>
                                 <li>
-                                    <a href="#">Rules and Regulations</a>
+                                    <a href="{{url('/rules')}}">Rules and Regulations</a>
                                 </li>
                                 <li>
-                                    <a href="#">Frequently asked Questions</a>
+                                    <a href="{{url('/faq')}}">Frequently asked Questions</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">Help centre</a>
+                                    <a href="{{url('/contact')}}">Help centre</a>
                                 </li>
                             </ul>
                         </div>
